@@ -25,5 +25,21 @@ namespace Day19_UserRegistration
                 }
             }
         }
+        public static void Check_Last_Name()
+        {
+            string pattern = "^[A-Z]{1}[a-z]{2,}$";
+            string[] LastName = { "Goyenka", "Gill", "Sehwag", "peter", "Hussy" };
+            foreach(string LName in LastName)
+            {
+                if(Regex.IsMatch(LName, pattern))
+                {
+                    Console.WriteLine("{0} is valid",LName);
+                }
+                else 
+                {
+                    Console.WriteLine("{0} is not valid",LName); 
+                }
+            }
+        }
     }
 }
