@@ -41,5 +41,21 @@ namespace Day19_UserRegistration
                 }
             }
         }
+        public static void Check_For_Email()
+        {
+            string pattern = "^[a-z]{3}?([.][a-z0-9]{3})@[a-z]{2,}[.][a-z]{2,}?([.][a-z]{2})?$";
+            string[] ForEmail = {"abc.xyz@bl.co.in", "rahul.abc@yahoo.com", "Siva.xyz@mail.com","xyz@bb.co.in" };
+            foreach(string Email in ForEmail)
+            {
+                if(Regex.IsMatch(Email,pattern))
+                {
+                    Console.WriteLine("{0} is valid", Email);
+                }
+                else
+                {
+                    Console.WriteLine("{0} is not valid", Email);
+                }
+            }
+        }
     }
 }
