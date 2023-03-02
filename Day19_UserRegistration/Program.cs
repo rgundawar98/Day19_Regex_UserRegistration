@@ -8,7 +8,7 @@ namespace Day19_UserRegistration
         {
             Console.WriteLine("Welcome to the regular expression");
             Console.WriteLine("1.First Name\n2.Last Name\n3.Email\n4.Mobile Number\n5.Password\n6.Password Have One UpperCase" +
-                "\n7.Password Have One Numeric Number\n8.Password Must Have One Special Character");
+                "\n7.Password Have One Numeric Number\n8.Password Must Have One Special Character\n9.Check Email");
             Console.WriteLine("Choose option from above");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
@@ -36,6 +36,9 @@ namespace Day19_UserRegistration
                     break;
                 case 8:
                     Password.Password_Must_Have_One_Special_Character();
+                    break;
+                case 9:
+                    Email.Check_email();
                     break;
             }
         }
