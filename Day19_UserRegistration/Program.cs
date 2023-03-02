@@ -7,7 +7,8 @@ namespace Day19_UserRegistration
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the regular expression");
-            Console.WriteLine("1.First Name\n2.Last Name\n3.Email\n4.Mobile Number\n5.Password\n6.Password Have One UpperCase");
+            Console.WriteLine("1.First Name\n2.Last Name\n3.Email\n4.Mobile Number\n5.Password\n6.Password Have One UpperCase" +
+                "\n7.Password Have One Numeric Number");
             Console.WriteLine("Choose option from above");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
@@ -29,6 +30,9 @@ namespace Day19_UserRegistration
                     break;
                 case 6:
                     Password.Password_Must_Have_One_Upper_Case();
+                    break;
+                case 7:
+                    Password.Password_Have_One_Numeric_Number();
                     break;
             }
         }

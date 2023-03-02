@@ -41,5 +41,21 @@ namespace Day19_UserRegistration
                 }
             }
         }
+        public static void Password_Have_One_Numeric_Number()
+        {
+            string pattern = "[A-Za-z0-9$,@,#,&,*].{8,}$";
+            string[] Passwords = {"Rahul@123", "123rahul@12", "rahuL132@abm232"};
+            foreach(string passwd in Passwords)
+            {
+                if(Regex.IsMatch(passwd,pattern))
+                {
+                    Console.WriteLine("{0} is valid", passwd);
+                }
+                else
+                {
+                    Console.WriteLine("{0} is not valid",passwd);
+                }
+            }
+        }
     }
 }
