@@ -25,5 +25,21 @@ namespace Day19_UserRegistration
                 }
             }
         }
+        public static void Password_Must_Have_One_Upper_Case()
+        {
+            string pattern = "^[A-Z]{1}?[A-Za-z0-9$,@,#,&,*].{8,}$";
+            string[] Passwords = { "RAHULg@1234", "Isaih@123", "Siva@1235", "hae123" , "rAHUL12@gmail.com"};
+            foreach (string Passwd in Passwords)
+            {
+                if (Regex.IsMatch(Passwd, pattern))
+                {
+                    Console.WriteLine("{0} is valid ", Passwd);
+                }
+                else
+                {
+                    Console.WriteLine("{0} is not valid", Passwd);
+                }
+            }
+        }
     }
 }
