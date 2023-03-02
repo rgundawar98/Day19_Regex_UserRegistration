@@ -57,5 +57,22 @@ namespace Day19_UserRegistration
                 }
             }
         }
+        public static void Password_Must_Have_One_Special_Character()
+        {
+            string pattern = "[A-Za-z0-9$,#,@,*,&].{8,}$";
+            string[] Passwords = { "Rahul#123", "rAhul*321","raHul$123" };
+            foreach(string passwd in Passwords)
+            {
+                if(Regex.IsMatch(passwd,pattern))
+                {
+                    Console.WriteLine("{0} is valid", passwd);
+                }
+                else
+                {
+                    Console.WriteLine("{0} is not valid", passwd);
+                }
+            }
+
+        }
     }
 }
