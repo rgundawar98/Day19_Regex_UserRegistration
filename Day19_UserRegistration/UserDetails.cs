@@ -57,5 +57,21 @@ namespace Day19_UserRegistration
                 }
             }
         }
+        public static void Check_For_MobileNumber()
+        {
+            string pattern = "^[0-9]{2}[ ][0-9]{10}$";
+            string[] MobileNumbers = { "91 8087905735", "91 8421719373", "64 1234667890", "91 9970009212","91 528852879"};
+            foreach(string Number in MobileNumbers)
+            {
+                if(Regex.IsMatch(Number,pattern))
+                {
+                    Console.WriteLine("{0} is valid",Number);
+                }
+                else
+                {
+                    Console.WriteLine("{0} is not valid", Number);
+                }
+            }
+        }
     }
 }
